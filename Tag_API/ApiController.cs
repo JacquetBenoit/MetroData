@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -10,17 +8,25 @@ namespace Tag_API
 {
     public class ApiController
     {
+        IApiCall APICall;
+
+       public ApiController()
+            :this(new ApiCall())
+        {
+            
+        }
+
+        internal ApiController(IApiCall api)
+        {
+            this.APICall = api;
+        }
 
         public Dictionary<String, List<Station>> getNearStations(string x, string y, int dist)
         {
-            WebRequest request = WebRequest.Create("http://data.metromobilite.fr/api/linesNear/json?x=" + x + "&y=" + y + "&dist=" + dist + "&details=true");
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
+            IApiCall apiCall = this.APICall;
+            string data = apiCall.getData("http://data.metromobilite.fr/api/linesNear/json?x=" + x + "&y=" + y + "&dist=" + dist + "&details=true");
 
-            string responseFromServer = reader.ReadToEnd();
-
-            List<Station> stations = JsonConvert.DeserializeObject<List<Station>>(responseFromServer);
+            List<Station> stations = JsonConvert.DeserializeObject<List<Station>>(data);
             Dictionary<String, List<Station>> sortedStations = new Dictionary<string, List<Station>>();
 
 
@@ -43,14 +49,10 @@ namespace Tag_API
 
         public string getLineInfo(string id)
         {
-            WebRequest request = WebRequest.Create("http://data.metromobilite.fr/api/routers/default/index/routes?codes=" + id);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
+            IApiCall apiCall = this.APICall;
+            string data = apiCall.getData("http://data.metromobilite.fr/api/routers/default/index/routes?codes=" + id);
 
-            string responseFromServer = reader.ReadToEnd();
-
-            List<Ligne> lignes = JsonConvert.DeserializeObject<List<Ligne>>(responseFromServer);
+            List<Ligne> lignes = JsonConvert.DeserializeObject<List<Ligne>>(data);
 
             string infos = lignes[0].type + " " + lignes[0].shortname + " Ligne : " + lignes[0].longName;
 

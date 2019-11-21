@@ -8,13 +8,13 @@ namespace Tag_API
 {
     public class Ligne
     {
-        public string id;
-        public string gtfsId;
-        public string shortname;
-        public string longName;
-        public string color;
-        public string textColor;
-        public string mode;
-        public string type;
+        public string id { get; set; }
+        public string gtfsId { get; set; }
+        public string shortname { get; set; }
+        public string longName { get; set; }
+        public string color { get; set; }
+        public string textColor { get; set; }
+        public string mode { get; set; }
+        public string type { get; set; }
     }
 }

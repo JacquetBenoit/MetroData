@@ -7,8 +7,8 @@ namespace Tag_API
     {
         public String id { get; set; }
         public String name { get; set; }
-        public float lon { get; set; }
-        public float lat { get; set; }
+        public double lon { get; set; }
+        public double lat { get; set; }
         public String zone { get; set; }
         public IList<string> lines { get; set; }
     }

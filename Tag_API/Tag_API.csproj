@@ -49,7 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiCall.cs" />
     <Compile Include="ApiController.cs" />
+    <Compile Include="IApiCall.cs" />
     <Compile Include="Ligne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
