@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tag_API
+namespace Tag_API_ClassLibrary
 {
     public class Station
     {

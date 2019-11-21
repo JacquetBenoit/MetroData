@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tag_API;
+using Tag_API_ClassLibrary;
 
 namespace Tag_API_Test
 {

@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tag_API
+namespace Tag_API_ClassLibrary
 {
     class ApiCall : IApiCall
     {

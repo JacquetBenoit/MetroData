@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tag_API", "Tag_API\Tag_API.csproj", "{753AD7D2-2BB5-4DCE-A9D7-216F80DD8D07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tag_API_Test", "Tag_API_Test\Tag_API_Test.csproj", "{BB25DEF1-6BE1-4BAF-92C0-0553634E2258}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tag_API_Test", "Tag_API_Test\Tag_API_Test.csproj", "{BB25DEF1-6BE1-4BAF-92C0-0553634E2258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tag_API_ClassLibrary", "Tag_API_ClassLibrary\Tag_API_ClassLibrary.csproj", "{995973ED-AB58-4F50-8519-56EA98AF3B7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BB25DEF1-6BE1-4BAF-92C0-0553634E2258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB25DEF1-6BE1-4BAF-92C0-0553634E2258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB25DEF1-6BE1-4BAF-92C0-0553634E2258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995973ED-AB58-4F50-8519-56EA98AF3B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995973ED-AB58-4F50-8519-56EA98AF3B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995973ED-AB58-4F50-8519-56EA98AF3B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995973ED-AB58-4F50-8519-56EA98AF3B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

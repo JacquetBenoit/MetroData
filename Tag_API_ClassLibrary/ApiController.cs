@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace Tag_API
+namespace Tag_API_ClassLibrary
 {
     public class ApiController
     {

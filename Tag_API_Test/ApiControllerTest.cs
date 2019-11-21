@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using Tag_API;
+using Tag_API_ClassLibrary;
 
 namespace Tag_API_Test
 {

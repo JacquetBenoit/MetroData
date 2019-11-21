@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 
-namespace Tag_API
+namespace Tag_API_ClassLibrary
 {
     class Program
     {
