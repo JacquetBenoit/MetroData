@@ -1,3 +1,7 @@
 .vs
+
 Tag_API/bin/
 Tag_API/obj/
+
+Tag_API_Test/bin/
+Tag_API_Test/obj/
